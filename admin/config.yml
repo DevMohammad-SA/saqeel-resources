@@ -1,34 +1,30 @@
 backend:
   name: git-gateway
-  repo: DevMohammad-SA/saqeel-resources
   branch: master
 
-media_folder: "assets/uploads"
-public_folder: "/assets/uploads"
+media_folder: "assets/img/uploads"
+public_folder: "assets/img/uploads" 
 
-locale: "ar"
+locale: 'ar' 
 
 collections:
-  - name: "files"
-    label: "ملفات الموقع"
+  - name: "site_data"
+    label: "بيانات الموقع"
     files:
-      - name: "site_files"
-        label: "التراخيص وشعارات الداعمين"
-        file: "data/files.json"
-        fields:
-          - label: "التراخيص والوثائق الرسمية"
-            name: "licenses"
+      - label: "مكتبة المتطوعين"
+        name: "files"
+        file: "data/files.json"         fields:
+          - name: "licenses"
+            label: "التراخيص والوثائق الرسمية"
             widget: "list"
-            summary: "{{title}}"
             fields:
-              - { label: "اسم الملف", name: "title", widget: "string" }
-              - { label: "الملف (PDF)", name: "file", widget: "file", media_library: { config: { multiple: false } } }
-              - { label: "وصف مختصر (اختياري)", name: "description", widget: "string", required: false }
-
-          - label: "شعارات الجهات الداعمة"
-            name: "sponsors"
+              - {label: "عنوان الوثيقة", name: "title", widget: "string"}
+              - {label: "الوصف", name: "description", widget: "string", required: false}
+              - {label: "الملف المرفق", name: "file", widget: "file"}
+          
+          - name: "sponsors"
+            label: "شعارات الجهات الداعمة"
             widget: "list"
-            summary: "{{name}}"
             fields:
-              - { label: "اسم الجهة الداعمة", name: "name", widget: "string" }
-              - { label: "الشعار (PNG)", name: "logo", widget: "image" }
+              - {label: "اسم الداعم", name: "name", widget: "string"}
+              - {label: "الشعار", name: "logo", widget: "image"}
