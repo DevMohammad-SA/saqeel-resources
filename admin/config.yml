@@ -13,7 +13,8 @@ collections:
     files:
       - label: "مكتبة المتطوعين"
         name: "files"
-        file: "data/files.json"         fields:
+        file: "data/files.json"
+        fields:
           - name: "licenses"
             label: "التراخيص والوثائق الرسمية"
             widget: "list"
