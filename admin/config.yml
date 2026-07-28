@@ -1,0 +1,34 @@
+backend:
+  name: github
+  repo: YOUR-GITHUB-USERNAME/YOUR-REPO-NAME   # عدّل هذا السطر باسم المستودع على GitHub
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+locale: "ar"
+
+collections:
+  - name: "files"
+    label: "ملفات الموقع"
+    files:
+      - name: "site_files"
+        label: "التراخيص وشعارات الداعمين"
+        file: "data/files.json"
+        fields:
+          - label: "التراخيص والوثائق الرسمية"
+            name: "licenses"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "اسم الملف", name: "title", widget: "string" }
+              - { label: "الملف (PDF)", name: "file", widget: "file", media_library: { config: { multiple: false } } }
+              - { label: "وصف مختصر (اختياري)", name: "description", widget: "string", required: false }
+
+          - label: "شعارات الجهات الداعمة"
+            name: "sponsors"
+            widget: "list"
+            summary: "{{name}}"
+            fields:
+              - { label: "اسم الجهة الداعمة", name: "name", widget: "string" }
+              - { label: "الشعار (PNG)", name: "logo", widget: "image" }
