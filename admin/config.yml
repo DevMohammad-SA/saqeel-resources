@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: YOUR-GITHUB-USERNAME/YOUR-REPO-NAME   # عدّل هذا السطر باسم المستودع على GitHub
+  repo: DevMohammad-SA/saqeel-resources
   branch: main
 
 media_folder: "assets/uploads"
