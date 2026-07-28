@@ -11,7 +11,7 @@ collections:
   - name: "site_data"
     label: "بيانات الموقع"
     files:
-      - label: "مكتبة المتطوعين"
+      - label: "مكتبة الملفات"
         name: "files"
         file: "data/files.json"
         fields:
@@ -24,8 +24,8 @@ collections:
               - {label: "الملف المرفق", name: "file", widget: "file"}
           
           - name: "sponsors"
-            label: "شعارات الجهات الداعمة"
+            label: "شعارات الجهات"
             widget: "list"
             fields:
-              - {label: "اسم الداعم", name: "name", widget: "string"}
+              - {label: "اسم الجهة", name: "name", widget: "string"}
               - {label: "الشعار", name: "logo", widget: "image"}
