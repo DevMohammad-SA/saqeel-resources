@@ -1,31 +1,53 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: DevMohammad-SA/saqeel-resources
   branch: master
 
-media_folder: "assets/img/uploads"
-public_folder: "assets/img/uploads" 
-
-locale: 'ar' 
+media_folder: "assets/uploads"
+public_folder: "assets/uploads"
 
 collections:
-  - name: "site_data"
-    label: "بيانات الموقع"
+  - name: "dynamic_pages"
+    label: "إدارة محتوى الموقع"
     files:
-      - label: "مكتبة الملفات"
-        name: "files"
-        file: "data/files.json"
+      - file: "data/association.json"
+        label: "بيانات الجمعية"
+        name: "association"
+        format: "json"
         fields:
-          - name: "licenses"
-            label: "التراخيص والوثائق الرسمية"
+          - label: "ملفات الجمعية"
+            name: "files_list"
             widget: "list"
             fields:
-              - {label: "عنوان الوثيقة", name: "title", widget: "string"}
-              - {label: "الوصف", name: "description", widget: "string", required: false}
-              - {label: "الملف المرفق", name: "file", widget: "file"}
-          
-          - name: "sponsors"
-            label: "شعارات الجهات"
+              - {label: "عنوان الملف (مثل: شهادة الحساب البنكي)", name: "title", widget: "string"}
+              - {label: "رفع الملف", name: "file", widget: "file"}
+
+      - file: "data/identity.json"
+        label: "الهوية البصرية"
+        name: "identity"
+        format: "json"
+        fields:
+          - label: "ملفات الهوية"
+            name: "files_list"
             widget: "list"
             fields:
-              - {label: "اسم الجهة", name: "name", widget: "string"}
-              - {label: "الشعار", name: "logo", widget: "image"}
+              - {label: "عنوان الملف/الشعار", name: "title", widget: "string"}
+              - {label: "رفع الملف", name: "file", widget: "file"}
+
+      - file: "data/projects.json"
+        label: "المشاريع"
+        name: "projects"
+        format: "json"
+        fields:
+          - label: "قائمة المشاريع"
+            name: "projects_list"
+            widget: "list"
+            fields:
+              - {label: "اسم المشروع", name: "title", widget: "string"}
+              - {label: "وصف مختصر للمشروع", name: "description", widget: "text", required: false}
+              - label: "ملفات المشروع"
+                name: "project_files"
+                widget: "list"
+                fields:
+                  - {label: "عنوان الملف", name: "file_title", widget: "string"}
+                  - {label: "رفع الملف", name: "file", widget: "file"}

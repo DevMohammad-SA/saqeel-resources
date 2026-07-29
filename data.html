@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بيانات الجمعية | Saqeel Resources</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="page-body">
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="back-btn">⬅ العودة للرئيسية</a>
+      <h2>بيانات الجمعية</h2>
+    </div>
+  </header>
+
+  <main class="container mt-4">
+    <div class="files-grid" id="dynamic-files-container">
+      <p style="text-align: center;">جاري تحميل الملفات...</p>
+    </div>
+  </main>
+
+  <script>
+    fetch('data/association.json')
+      .then(response => {
+        if (!response.ok) throw new Error('لا توجد بيانات حالياً');
+        return response.json();
+      })
+      .then(data => {
+        const container = document.getElementById('dynamic-files-container');
+        container.innerHTML = '';
+
+        if (data.files_list && data.files_list.length > 0) {
+          data.files_list.forEach(item => {
+            container.innerHTML += `
+                            <div class="file-card">
+                                <h3>${item.title}</h3>
+                                <div class="action-buttons">
+                                    <a href="${item.file}" target="_blank" class="btn btn-preview">👀 معاينة</a>
+                                    <a href="${item.file}" download class="btn btn-download">⬇ تنزيل</a>
+                                </div>
+                            </div>
+                        `;
+          });
+        } else {
+          container.innerHTML = '<p style="text-align: center;">لم يتم إضافة ملفات بعد من لوحة التحكم.</p>';
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+        document.getElementById('dynamic-files-container').innerHTML = '<p style="text-align: center;">لم يتم العثور على ملفات.</p>';
+      });
+  </script>
+</body>
+
+</html>
