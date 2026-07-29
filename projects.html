@@ -31,12 +31,17 @@
         container.innerHTML = '';
 
         if (data.projects_list && data.projects_list.length > 0) {
-          data.projects_list.forEach(project => {
+          data.projects_list.forEach((project, index) => {
+            // استخدام details و summary لجعل المشروع قابلاً للفتح والإغلاق بالضغط على اسمه
+            // جعلنا أول مشروع مفتوح افتراضياً والباقي مغلق
+            const isOpen = index === 0 ? 'open' : '';
+
             let projectHTML = `
-                            <div class="project-section">
-                                <h3 class="project-title">🚀 ${project.title}</h3>
-                                ${project.description ? `<p>${project.description}</p>` : ''}
-                                <div class="files-grid mt-2">
+                            <details class="project-section" ${isOpen}>
+                                <summary class="project-title">🚀 ${project.title}</summary>
+                                <div class="project-content">
+                                    ${project.description ? `<p class="project-desc">${project.description}</p>` : ''}
+                                    <div class="files-grid">
                         `;
 
             if (project.project_files && project.project_files.length > 0) {
@@ -55,7 +60,7 @@
               projectHTML += `<p>لا توجد ملفات مرفقة بهذا المشروع حالياً.</p>`;
             }
 
-            projectHTML += `</div></div>`;
+            projectHTML += `</div></div></details>`;
             container.innerHTML += projectHTML;
           });
         } else {
