@@ -189,3 +189,59 @@ img{max-width:100%;display:block}
   .footer-inner{flex-direction:column;text-align:center}
   .footer-meta{text-align:center}
 }
+.files-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.file-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+}
+
+/* تنسيق الأزرار (Buttons) */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-preview {
+    background-color: #f0f4f8;
+    color: #333;
+    border: 1px solid #d1d5db;
+}
+
+.btn-preview:hover {
+    background-color: #e2e8f0;
+}
+
+.btn-download {
+    background-color: #2563eb; /* يمكنك تغييره للون الجمعية */
+    color: #fff;
+}
+
+.btn-download:hover {
+    background-color: #1d4ed8;
+}
+
+.project-section {
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}

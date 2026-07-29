@@ -4,130 +4,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>جمعية صقيل لتنمية الشباب — مكتبة الملفات</title>
-  <meta name="description"
-    content="مكتبة الملفات في جمعية صقيل لتنمية الشباب: التراخيص والوثائق الرسمية، وشعارات الجهات.">
-  <script>
-    if (window.location.hash.includes("_token=")) {
-      window.location.replace("/admin/" + window.location.hash);
-    }
-  </script>
-  <link rel="icon" href="assets/img/mark-blue.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&family=Cairo:wght@400;600;800&display=swap"
-    rel="stylesheet">
+  <title>موارد جمعية صقيل | Saqeel Resources</title>
   <link rel="stylesheet" href="assets/css/style.css">
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
-<body>
+<body class="home-page-body">
 
-  <div class="facet-topbar" aria-hidden="true"></div>
-
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <div class="brand">
-        <img src="assets/img/mark-blue.png" alt="" class="brand-mark">
-        <div class="brand-text">
-          <span class="brand-name">جمعية صقيل</span>
-          <span class="brand-sub">لتنمية الشباب</span>
-        </div>
-      </div>
-      <nav class="main-nav">
-        <a href="#licenses">التراخيص والوثائق</a>
-        <a href="#sponsors">شعارات الجهات</a>
-        <a href="https://saqeel.org.sa" target="_blank" rel="noopener">الموقع الرسمي</a>
-      </nav>
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="assets/img/logo-horizontal.png" alt="شعار جمعية صقيل" height="60">
+      </a>
     </div>
   </header>
 
-  <main>
+  <main class="hero-section">
+    <div class="container text-center">
+      <h1 class="main-title">البوابة الموحدة لموارد جمعية صقيل</h1>
+      <p class="sub-title">اختر القسم المطلوب للوصول إلى الملفات، الشهادات، والمشاريع.</p>
 
-    <section class="hero">
-      <div class="wrap hero-inner">
-        <div class="hero-copy">
-          <span class="eyebrow">مكتبة الملفات</span>
-          <h1>كل ملف تحتاجه، في مكان واحد</h1>
-          <p>التراخيص الرسمية وشعارات الجهات لجمعية صقيل لتنمية الشباب، جاهزة للتحميل المباشر بدون أي تسجيل
-            دخول.</p>
-          <div class="hero-actions">
-            <a href="#licenses" class="btn btn-primary">تصفّح التراخيص</a>
-            <a href="#sponsors" class="btn btn-ghost">شعارات الجهات</a>
-          </div>
-        </div>
-        <div class="hero-mark" aria-hidden="true">
-          <img src="assets/img/mark-black.png" alt="">
-        </div>
-      </div>
-    </section>
+      <div class="cards-container">
+        <a href="data.html" class="nav-card">
+          <div class="card-icon">📁</div>
+          <h2>بيانات الجمعية</h2>
+          <p>التراخيص، الإعفاء الضريبي، والحسابات البنكية.</p>
+        </a>
 
-    <section id="licenses" class="file-section">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="facet-index">01</span>
-          <div>
-            <h2>التراخيص والوثائق الرسمية</h2>
-            <p class="section-desc">مستندات الجمعية الرسمية: رخصة الترخيص، الشهادات، والوثائق المعتمدة.</p>
-          </div>
-        </div>
-        <div id="licenses-grid" class="file-grid">
-          <p class="empty-state">جارٍ تحميل الملفات...</p>
-        </div>
-      </div>
-    </section>
+        <a href="identity.html" class="nav-card">
+          <div class="card-icon">🎨</div>
+          <h2>الهوية البصرية</h2>
+          <p>الشعارات الرسمية بجميع الصيغ والألوان.</p>
+        </a>
 
-    <section id="sponsors" class="file-section alt">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="facet-index">02</span>
-          <div>
-            <h2>شعارات الجهات</h2>
-            <p class="section-desc">شعارات الجهات والشركاء بصيغة PNG عالية الجودة، جاهزة للاستخدام في المطبوعات
-              والمنشورات.</p>
-          </div>
-        </div>
-        <div id="sponsors-grid" class="logo-grid">
-          <p class="empty-state">جارٍ تحميل الشعارات...</p>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <img src="assets/img/logo-horizontal.png" alt="جمعية صقيل لتنمية الشباب" class="footer-logo">
-      <div class="footer-meta">
-        <p>القطيف - حزم أم الساهك</p>
-        <p dir="ltr">0570557024 &nbsp;|&nbsp; saqeel.org.sa</p>
-        <p class="dev-credit" style="margin-top: 6px;">
-          <a href="https://github.com/DevMohammad-SA/saqeel-resources" target="_blank" rel="noopener" title="GitHub"
-            style="color: inherit; opacity: 0.7; display: inline-block;">
-            <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle;">
-              <path
-                d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8z">
-              </path>
-            </svg>
-          </a>
-        </p>
+        <a href="projects.html" class="nav-card">
+          <div class="card-icon">🚀</div>
+          <h2>المشاريع</h2>
+          <p>ملفات وتفاصيل المشاريع الحالية (مثل مشروع إشراقة).</p>
+        </a>
       </div>
     </div>
-  </footer>
+  </main>
 
-  <script src="assets/js/main.js"></script>
-  <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
-  </script>
 </body>
 
 </html>
