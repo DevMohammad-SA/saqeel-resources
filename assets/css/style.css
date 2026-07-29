@@ -197,3 +197,50 @@ img { max-width: 100%; display: block; }
   .footer-inner { flex-direction: column; text-align: center; }
   .footer-meta { text-align: center; }
 }
+
+details.project-section {
+    background: #fff;
+    padding: 20px 24px;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    transition: all 0.2s ease;
+}
+
+details.project-section[open] {
+    box-shadow: 0 8px 20px rgba(14,53,86,.08);
+}
+
+details.project-section summary.project-title {
+    font-size: 1.3rem;
+    color: var(--navy-deep);
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+details.project-section summary.project-title::after {
+    content: "▼";
+    font-size: 0.8rem;
+    color: var(--blue);
+    transition: transform 0.3s ease;
+}
+
+details.project-section[open] summary.project-title::after {
+    transform: rotate(180deg);
+}
+
+.project-content {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid var(--line);
+}
+
+.project-desc {
+    color: var(--ink-soft);
+    margin-bottom: 20px;
+}
