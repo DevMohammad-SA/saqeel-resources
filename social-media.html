@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>وسائل التواصل | Saqeel Resources</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Tajawal:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="page-body">
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="back-btn">⬅ العودة للرئيسية</a>
+      <h2>وسائل التواصل الاجتماعي</h2>
+    </div>
+  </header>
+
+  <main class="container mt-4">
+    <div class="project-section">
+      <div
+        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; flex-wrap: wrap; gap: 15px;">
+        <h3 class="project-title" style="margin: 0;">حسابات الجمعية الرسمية</h3>
+        <button id="copyAllBtn" class="btn btn-primary"
+          style="flex: none; width: auto; cursor: pointer; border: none; font-family: inherit;">
+          📋 نسخ جميع الحسابات
+        </button>
+      </div>
+
+      <p class="section-desc mb-4">يمكنك الضغط على أي رابط لفتحه مباشرة، أو استخدام زر النسخ بالأعلى لنسخ جميع الروابط
+        كنص واحد.</p>
+      <div class="files-grid mt-4">
+        <!-- X -->
+        <div class="file-card">
+          <h4 style="display: flex; align-items: center; gap: 10px;">
+            <i class="fa-brands fa-x-twitter" style="font-size: 1.5rem; color: #000000;"></i>
+            𝕏 (تويتر سابقاً)
+          </h4>
+          <a href="https://x.com/SaqeelDev" target="_blank" dir="ltr"
+            style="display:inline-block; margin-top:10px; color:var(--blue); text-decoration: none;">https://x.com/SaqeelDev</a>
+        </div>
+
+        <!-- YouTube -->
+        <div class="file-card">
+          <h4 style="display: flex; align-items: center; gap: 10px;">
+            <i class="fa-brands fa-youtube" style="font-size: 1.5rem; color: #FF0000;"></i>
+            يوتيوب
+          </h4>
+          <a href="https://www.youtube.com/@SaqeelDev" target="_blank" dir="ltr"
+            style="display:inline-block; margin-top:10px; color:var(--blue); text-decoration: none;">https://www.youtube.com/@SaqeelDev</a>
+        </div>
+
+        <!-- Snapchat -->
+        <div class="file-card" style="word-break: break-all;">
+          <h4 style="display: flex; align-items: center; gap: 10px;">
+            <i class="fa-brands fa-snapchat" style="font-size: 1.5rem; color: #eebd00;"></i>
+            سناب شات
+          </h4>
+          <a href="https://www.snapchat.com/add/saqeeldev?share_id=-_9GUh5MTUA&locale=ar-EG" target="_blank" dir="ltr"
+            style="display:inline-block; margin-top:10px; color:var(--blue); text-decoration: none;">https://www.snapchat.com/add/saqeeldev</a>
+        </div>
+
+        <!-- Instagram -->
+        <div class="file-card" style="word-break: break-all;">
+          <h4 style="display: flex; align-items: center; gap: 10px;">
+            <i class="fa-brands fa-instagram" style="font-size: 1.5rem; color: #E1306C;"></i>
+            انستغرام
+          </h4>
+          <a href="https://www.instagram.com/saqeeldev?igsh=bjV3MnA2ZmN5cWQ4" target="_blank" dir="ltr"
+            style="display:inline-block; margin-top:10px; color:var(--blue); text-decoration: none;">https://www.instagram.com/saqeeldev</a>
+        </div>
+
+        <!-- WhatsApp -->
+        <div class="file-card" style="word-break: break-all;">
+          <h4 style="display: flex; align-items: center; gap: 10px;">
+            <i class="fa-brands fa-whatsapp" style="font-size: 1.5rem; color: #25D366;"></i>
+            واتساب (قناة)
+          </h4>
+          <a href="https://whatsapp.com/channel/0029Vb7cn4T1dAwBeFhuNN1M" target="_blank" dir="ltr"
+            style="display:inline-block; margin-top:10px; color:var(--blue); text-decoration: none;">https://whatsapp.com/channel/0029Vb7cn4T1dAwBeFhuNN1M</a>
+        </div>
+
+        <!-- Phone -->
+        <div class="file-card">
+          <h4 style="display: flex; align-items: center; gap: 10px;">
+            <i class="fa-solid fa-phone" style="font-size: 1.3rem; color: var(--ink-soft);"></i>
+            رقم الجوال
+          </h4>
+          <a href="tel:0570557024" dir="ltr"
+            style="display:inline-block; margin-top:10px; color:var(--blue); text-decoration: none;">0570557024</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- سكربت ميزة النسخ -->
+  <script>
+    document.getElementById('copyAllBtn').addEventListener('click', function () {
+      // النص الذي سيتم نسخه
+      const textToCopy = `وسائل التواصل الخاصة بجمعية صقيل لتنمية الشباب:
+
+X (تويتر): https://x.com/SaqeelDev
+يوتيوب: https://www.youtube.com/@SaqeelDev
+سناب شات: https://www.snapchat.com/add/saqeeldev?share_id=-_9GUh5MTUA&locale=ar-EG
+انستغرام: https://www.instagram.com/saqeeldev?igsh=bjV3MnA2ZmN5cWQ4
+واتساب: https://whatsapp.com/channel/0029Vb7cn4T1dAwBeFhuNN1M
+رقم الجوال: 0570557024`;
+
+      // استخدام واجهة برمجة الحافظة (Clipboard API)
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        const btn = document.getElementById('copyAllBtn');
+        const originalText = btn.innerHTML;
+
+        // تغيير شكل الزر لتأكيد النسخ
+        btn.innerHTML = '✅ تم النسخ بنجاح!';
+        btn.style.backgroundColor = '#10b981'; // لون أخضر
+        btn.style.color = '#fff';
+
+        // إعادة الزر لشكله الأصلي بعد ثانيتين
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.style.backgroundColor = '';
+          btn.style.color = '';
+        }, 2000);
+      }).catch(err => {
+        console.error('فشل النسخ: ', err);
+        alert('عذراً، حدث خطأ أثناء محاولة النسخ.');
+      });
+    });
+  </script>
+</body>
+
+</html>
