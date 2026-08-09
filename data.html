@@ -17,6 +17,7 @@
     <div class="container">
       <a href="index.html" class="back-btn">⬅ العودة للرئيسية</a>
       <h2>بيانات الجمعية</h2>
+      <span class="license-badge">مرخصة برقم: 1000810600</span>
     </div>
   </header>
 
@@ -27,6 +28,31 @@
   </main>
 
   <script>
+    function escapeHtml(str) {
+      return String(str ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    function renderCopyLines(copyLines) {
+      if (!copyLines || !copyLines.length) return '';
+      const rows = copyLines.map(line => {
+        const label = escapeHtml(line.label);
+        const value = escapeHtml(line.value);
+        const fullLine = `${line.label}: ${line.value}`;
+        return `
+                            <div class="copy-line">
+                                <span class="copy-line-text"><strong>${label}:</strong> ${value}</span>
+                                <button type="button" class="copy-btn" data-copy="${escapeHtml(fullLine)}" title="نسخ">📋</button>
+                            </div>
+                        `;
+      }).join('');
+      return `<div class="copy-lines">${rows}</div>`;
+    }
+
     fetch('data/association.json')
       .then(response => {
         if (!response.ok) throw new Error('لا توجد بيانات حالياً');
@@ -41,6 +67,7 @@
             container.innerHTML += `
                             <div class="file-card">
                                 <h3>${item.title}</h3>
+                                ${renderCopyLines(item.copy_lines)}
                                 <div class="action-buttons">
                                     <a href="${item.file}" target="_blank" class="btn btn-preview">👀 معاينة</a>
                                     <a href="${item.file}" download class="btn btn-download">⬇ تنزيل</a>
@@ -51,6 +78,23 @@
         } else {
           container.innerHTML = '<p style="text-align: center;">لم يتم إضافة ملفات بعد من لوحة التحكم.</p>';
         }
+
+        container.addEventListener('click', (e) => {
+          const btn = e.target.closest('.copy-btn');
+          if (!btn) return;
+          const text = btn.getAttribute('data-copy') || '';
+          navigator.clipboard.writeText(text).then(() => {
+            const original = btn.textContent;
+            btn.textContent = '✔';
+            btn.classList.add('copied');
+            setTimeout(() => {
+              btn.textContent = original;
+              btn.classList.remove('copied');
+            }, 1500);
+          }).catch(() => {
+            alert('تعذر نسخ النص، يرجى نسخه يدويًا');
+          });
+        });
       })
       .catch(error => {
         console.error('Error fetching data:', error);

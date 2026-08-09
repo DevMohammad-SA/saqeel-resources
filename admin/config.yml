@@ -21,6 +21,13 @@ collections:
             fields:
               - {label: "عنوان الملف (مثل: شهادة الحساب البنكي)", name: "title", widget: "string"}
               - {label: "رفع الملف", name: "file", widget: "file"}
+              - label: "بيانات قابلة للنسخ (اختياري، مثل بيانات الحساب البنكي)"
+                name: "copy_lines"
+                widget: "list"
+                required: false
+                fields:
+                  - {label: "التسمية (مثل: رقم الآيبان)", name: "label", widget: "string"}
+                  - {label: "القيمة", name: "value", widget: "string"}
 
       - file: "data/identity.json"
         label: "الهوية البصرية"
@@ -45,6 +52,7 @@ collections:
             fields:
               - {label: "اسم المشروع", name: "title", widget: "string"}
               - {label: "وصف مختصر للمشروع", name: "description", widget: "text", required: false}
+              - {label: "رابط مجلد Google Drive لرفع صور المشروع (اختياري)", name: "drive_folder_url", widget: "string", required: false}
               - label: "ملفات المشروع"
                 name: "project_files"
                 widget: "list"

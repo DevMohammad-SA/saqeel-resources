@@ -17,6 +17,7 @@
     <div class="container">
       <a href="index.html" class="back-btn">⬅ العودة للرئيسية</a>
       <h2>الهوية البصرية</h2>
+      <span class="license-badge">مرخصة برقم: 1000810600</span>
     </div>
   </header>
 
@@ -43,8 +44,8 @@
             container.innerHTML += `
                             <div class="file-card">
                                 <h3>${item.title}</h3>
+                                <img src="${item.file}" alt="${item.title}" class="logo-preview" loading="lazy">
                                 <div class="action-buttons">
-                                    <a href="${item.file}" target="_blank" class="btn btn-preview">👀 معاينة</a>
                                     <a href="${item.file}" download class="btn btn-download">⬇ تنزيل</a>
                                 </div>
                             </div>

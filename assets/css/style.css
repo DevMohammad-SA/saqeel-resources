@@ -105,6 +105,20 @@ img { max-width: 100%; display: block; }
 }
 .back-btn:hover { color: var(--navy); }
 
+.license-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--ice);
+  color: var(--navy-deep);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: .8rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
 /* ---------------------------------------------------------
    قسم الهيرو (الصفحة الرئيسية)
    --------------------------------------------------------- */
@@ -266,6 +280,73 @@ img { max-width: 100%; display: block; }
   color: #fff;
 }
 .btn-download:hover { background-color: var(--navy); }
+
+.logo-preview {
+  width: 100%;
+  max-height: 160px;
+  object-fit: contain;
+  background: var(--paper-alt);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.btn-drive {
+  background-color: #fff;
+  color: var(--blue);
+  border: 1px dashed var(--blue);
+  align-self: flex-start;
+}
+.btn-drive:hover { background-color: var(--ice); }
+
+/* ---------------------------------------------------------
+   بيانات قابلة للنسخ داخل البطاقة (مثل بيانات الحساب البنكي)
+   --------------------------------------------------------- */
+.copy-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--paper-alt);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.copy-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.copy-line-text {
+  font-size: .9rem;
+  color: var(--ink-soft);
+  word-break: break-all;
+}
+
+.copy-line-text strong {
+  color: var(--navy-deep);
+}
+
+.copy-btn {
+  flex-shrink: 0;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--navy);
+  border-radius: 6px;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: .95rem;
+  padding: 0;
+  transition: background .2s ease, transform .15s ease;
+}
+.copy-btn:hover { background: var(--ice); transform: translateY(-1px); }
+.copy-btn.copied { background: var(--blue); color: #fff; border-color: var(--blue); }
 
 /* ---------------------------------------------------------
    قسم المشاريع (details/summary قابل للطي)

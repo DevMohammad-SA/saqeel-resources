@@ -17,6 +17,7 @@
     <div class="container">
       <a href="index.html" class="back-btn">⬅ العودة للرئيسية</a>
       <h2>المشاريع</h2>
+      <span class="license-badge">مرخصة برقم: 1000810600</span>
     </div>
   </header>
 
@@ -45,6 +46,7 @@
                                 <summary class="project-title">🚀 ${project.title}</summary>
                                 <div class="project-content">
                                     ${project.description ? `<p class="project-desc">${project.description}</p>` : ''}
+                                    ${project.drive_folder_url ? `<a href="${project.drive_folder_url}" target="_blank" class="btn btn-drive">📤 رفع صور المشروع</a>` : ''}
                                     <div class="files-grid">
                         `;
 
