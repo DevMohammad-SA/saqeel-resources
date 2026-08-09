@@ -401,10 +401,17 @@ details.project-section[open] summary.project-title::after {
    الفوتر
    --------------------------------------------------------- */
 .site-footer {
-  background: var(--navy-deep);
-  color: var(--ice);
-  padding-block: 34px;
+  background: var(--paper-alt);
+  color: var(--ink-soft);
+  border-top: 1px solid var(--line);
+  padding-block: 24px;
   margin-top: 40px;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: .9rem;
 }
 
 .footer-inner {
