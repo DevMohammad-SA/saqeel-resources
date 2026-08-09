@@ -16,11 +16,23 @@
     },
     {
       "file": "assets/uploads/شهادة-ترخيص-الجمعية.pdf",
-      "title": "شهادة ترخيص الجمعية"
+      "title": "شهادة ترخيص الجمعية",
+      "copy_lines": [
+        {
+          "value": "1000810600",
+          "label": "رقم الترخيص"
+        }
+      ]
     },
     {
       "title": "العنوان الوطني",
-      "file": "assets/uploads/العنوان-الوطني.jpg"
+      "file": "assets/uploads/العنوان-الوطني.jpg",
+      "copy_lines": [
+        {
+          "value": "EQAA6436",
+          "label": "العنوان المختصر"
+        }
+      ]
     }
   ]
 }
