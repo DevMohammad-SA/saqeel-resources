@@ -30,7 +30,12 @@ body {
   background: var(--paper);
   line-height: 1.7;
   direction: rtl;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
+main { flex: 1 0 auto; }
 
 h1, h2, h3, h4, .brand-name { font-family: 'Cairo', sans-serif; }
 a { color: inherit; }
@@ -117,6 +122,31 @@ img { max-width: 100%; display: block; }
   font-size: .8rem;
   font-weight: 700;
   white-space: nowrap;
+}
+
+.page-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.page-nav-link {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background .2s ease, color .2s ease;
+}
+
+.page-nav-link:hover { background: var(--ice); color: var(--navy); }
+
+.page-nav-link.is-active {
+  background: var(--navy);
+  color: #fff;
 }
 
 /* ---------------------------------------------------------
@@ -407,6 +437,7 @@ details.project-section[open] summary.project-title::after {
   padding-block: 24px;
   margin-top: 40px;
   text-align: center;
+  flex-shrink: 0;
 }
 
 .site-footer p {
@@ -435,6 +466,16 @@ details.project-section[open] summary.project-title::after {
   .footer-inner { flex-direction: column; text-align: center; }
   .footer-meta { text-align: center; }
   .navbar .container { flex-wrap: wrap; gap: 10px; }
+  .page-nav {
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .page-nav::-webkit-scrollbar { display: none; }
+  .page-nav-link { flex-shrink: 0; }
 }
 
 @media (max-width: 480px) {
