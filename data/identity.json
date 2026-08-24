@@ -19,6 +19,22 @@
     {
       "title": "شعار الجمعية بدون نص - أبيض",
       "file": "assets/uploads/asset-33.png"
+    },
+    {
+      "file": "assets/uploads/أسود-طولي.png",
+      "title": "شعار لجمعية أسود - طولي"
+    },
+    {
+      "title": "شعار الجمعية أبيض - طولي",
+      "file": "assets/uploads/أبيض-طولي.png"
+    },
+    {
+      "file": "assets/uploads/أسود-عرضي.png",
+      "title": "شعار الجمعية أسود -عرضي"
+    },
+    {
+      "file": "assets/uploads/أبيض-عرضي.png",
+      "title": "شعار الجمعية أبيض - عرضي"
     }
   ]
 }
