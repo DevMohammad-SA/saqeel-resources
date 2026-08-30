@@ -1,7 +1,7 @@
 {
   "files_list": [
     {
-      "file": "assets/uploads/شهادة-بيان-الحساب-البنكي.pdf",
+      "file": "assets/uploads/الشهادة-البنكية-الجديدة-للانماء-2026.pdf",
       "title": "شهادة الحساب البنكي",
       "copy_lines": [
         {
@@ -15,7 +15,7 @@
       ]
     },
     {
-      "file": "assets/uploads/شهادة-ترخيص-الجمعية.pdf",
+      "file": "assets/uploads/ترخيص-الجمعية-بالشكل-الجديد-حى-11-8-2026.pdf",
       "title": "شهادة ترخيص الجمعية",
       "copy_lines": [
         {
@@ -75,7 +75,8 @@
           "label": "رقم الجوال",
           "value": "0570557024"
         }
-      ]
+      ],
+      "file": "mailto:saqeel.dev@gmail.com"
     }
   ]
 }
