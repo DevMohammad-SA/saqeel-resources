@@ -10,6 +10,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+  <style>
+    .cards-container .nav-card { padding: 0; overflow: hidden; }
+    .cards-container .card-thumb {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+    }
+    .cards-container .nav-card .card-body { padding: 20px 30px 30px; }
+  </style>
 </head>
 
 <body class="home-page-body">
@@ -27,15 +37,19 @@
 
       <div class="cards-container">
         <a href="games/huroof.html" class="nav-card" target="_blank" rel="noopener">
-          <div class="card-icon">🔤</div>
-          <h2>حروف مع صقيل</h2>
-          <p>مسابقة تفاعلية لتكوين الكلمات من الحروف.</p>
+          <img src="assets/img/games/huroof-thumb.webp" alt="حروف مع صقيل" class="card-thumb">
+          <div class="card-body">
+            <h2>حروف مع صقيل</h2>
+            <p>مسابقة تفاعلية لتكوين الكلمات من الحروف.</p>
+          </div>
         </a>
 
         <a href="games/tarabee.html" class="nav-card" target="_blank" rel="noopener">
-          <div class="card-icon">🧩</div>
-          <h2>ترابيع صقيل</h2>
-          <p>مسابقة تفاعلية على شكل شبكة تربيعية.</p>
+          <img src="assets/img/games/tarabee-thumb.png" alt="ترابيع صقيل" class="card-thumb">
+          <div class="card-body">
+            <h2>ترابيع صقيل</h2>
+            <p>مسابقة تفاعلية على شكل شبكة تربيعية.</p>
+          </div>
         </a>
       </div>
     </div>
